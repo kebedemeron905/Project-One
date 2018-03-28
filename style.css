@@ -1,0 +1,101 @@
+body {
+
+    background-color: white;
+    padding: 20px 300px 0px 300px;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    padding: 30px 0px 80px 0px;
+    margin: 0 auto;
+}
+
+    
+.flashCards {
+    height: 415px;  
+    width: 600px;
+        margin: 0 auto;
+        border: 2px solid gray;
+        border-radius: 10px;
+        background-color: white;
+    
+}
+
+.backText {
+    color: red;
+    text-align: center;
+    padding: 9px;
+    background-color: white;
+}
+
+
+.back {
+ display: none;
+}
+
+/* 
+#image {
+
+} */
+
+
+
+font {
+    height: 620px;  
+        width: 800px; 
+        margin: 0 auto;
+        border: 2px solid gray;
+        border-radius: 10px; 
+        box-shadow: 5px 10px yellowgreen;
+}
+
+image {
+    height: 100px;  
+        width: 600px; 
+        margin: 0 auto;
+        border: 2px solid gray;
+        border-radius: 50px; 
+    
+}
+
+
+/* /* .backContainer {
+  display: flex;
+  align-items: flex-end;
+ } */
+
+button.green {
+    display: inline-block; 
+    font-size:15px;
+    color: green;
+    text-align: right;
+    
+    /* Cite W3schools UTF-8 Dingbats */
+  }
+
+
+button.red {
+    display: inline-block; 
+    font-size:15px;
+    color: rgba(255, 0, 0, 0.434);
+    text-align: left; 
+    
+} 
+
+
+ .checkButtons {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    padding: 20px;
+} 
+
+/* .navarrows {
+    display: flex;
+   flex-direction: row;
+   /* align-items: center */
+  /* align-items: center;
+  justify-content: flex-start;
+} */
