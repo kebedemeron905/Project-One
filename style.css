@@ -1,101 +1,152 @@
 body {
-
+    width: 50%;
+    min-height: 100%;
     background-color: white;
-    padding: 20px 300px 0px 300px;
+    margin: 0 auto;
     background-image: url("images/background.jpg");
     background-size: cover;
 }
 
 h1 {
-    text-align: center;
-    padding: 30px 0px 80px 0px;
-    margin: 0 auto;
+    text-align: left;
+    font-size: 40px;
+    padding: 10px 0px 10px 0px;
+    color: wheat;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-    
-.flashCards {
-    height: 415px;  
-    width: 600px;
+h3 {
+    font-size: 30px;
+    color: wheat;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    padding: 0px;
+}
+
+.container {
+    height: 480px;  
+    width: 560px;
         margin: 0 auto;
-        border: 2px solid gray;
+        border: 3px solid wheat;
         border-radius: 10px;
         background-color: white;
-    
+        justify-items: stretch;
+        display:grid;
+      
 }
 
-.backText {
-    color: red;
-    text-align: center;
-    padding: 9px;
+arrayimg {
+    height: 415px;  
+    width: 600px;
+    margin: 0 auto;  
+    justify-items: stretch;
+    display:grid;
+    padding-top: 29px;
+}
+
+ .correct {
     background-color: white;
-}
-
-
-.back {
- display: none;
-}
-
-/* 
-#image {
-
-} */
-
-
-
-font {
-    height: 620px;  
-        width: 800px; 
-        margin: 0 auto;
-        border: 2px solid gray;
-        border-radius: 10px; 
-        box-shadow: 5px 10px yellowgreen;
-}
-
-image {
-    height: 100px;  
-        width: 600px; 
-        margin: 0 auto;
-        border: 2px solid gray;
-        border-radius: 50px; 
-    
-}
-
-
-/* /* .backContainer {
-  display: flex;
-  align-items: flex-end;
- } */
-
-button.green {
-    display: inline-block; 
-    font-size:15px;
-    color: green;
-    text-align: right;
-    
-    /* Cite W3schools UTF-8 Dingbats */
+    border: none;
+    color: black;
+    border-radius: 20px;
+    text-align: center;
+    display: inline-block;
+    position:absolute;  
+    margin-left: 60%;   
+    top:400px;
+    right: 250px; 
+    padding: 30px;
+    font-size: 25px;
   }
 
 
-button.red {
-    display: inline-block; 
-    font-size:15px;
-    color: rgba(255, 0, 0, 0.434);
-    text-align: left; 
+
+ .wrong {
+
+    background-color: white;
+    border: salmon;
+    border-radius: 20px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    position:absolute; 
+    margin-right:57%;   
+    top:400px;
+    right: 250px; 
+    padding: 30px;
+    font-size: 25px;
+   
     
-} 
+       
+}
+   .checkButtons {
+       display: flex;
+      justify-content:space-between;
+ 
+     
+   } 
+    
+
+    
+.currentAnswer{
+    display: none;  
+    
+}
+div.currentAnswer{
+    font-size: 30px;
+    text-align: center;
+}
 
 
- .checkButtons {
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    padding: 20px;
-} 
 
-/* .navarrows {
-    display: flex;
-   flex-direction: row;
-   /* align-items: center */
-  /* align-items: center;
-  justify-content: flex-start;
-} */
+.currentscore {
+color: wheat;
+font-size: 30px;
+text-align: center;
+
+}
+
+.navbuttons {
+display: flex;
+justify-content: space-evenly;
+padding: 0px;
+
+
+}
+button.next{
+    font-size: 50px;
+    padding: 0;
+    border: none;
+    background: none;
+
+}
+button.previous{
+
+    font-size: 50px;
+    padding: 0;
+    border: none;
+    background: none;
+
+
+}
+
+/* .resetbutton {
+    
+    font-size: 30px;
+
+
+}
+
+/* reset {
+text-align: right;
+} */ 
+
+.next{
+
+}
+
+.previous {
+
+}
+

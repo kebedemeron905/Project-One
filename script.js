@@ -1,44 +1,101 @@
 
-let cardCounter = document.querySelector('.flashCards')
-// let frontCards = document.querySelector('.front #image')
-let backCards = document.querySelector('.back')
-// let correct = document.querySelector('.green')
-// let incorrect = document.querySelector('.red')
-let image1 = document.querySelector('.image')
+let container = document.querySelector('.container')
+let frontSide = document.querySelector('.front_side')
+let currentImage = document.querySelector('.currentImage')
+let currentAnswer = document.querySelector('.currentAnswer')
+let correct = document.querySelector('.correct')
+let wrong = document.querySelector('.wrong')
+let next = document.querySelector('.next')
+let previous = document.querySelector('.previous')
+let startingScore = document.querySelector('.currentscore')
+// let arrayImg = document.getElementById('arrayimg')
 
-cardCounter.addEventListener('click', function () {
+container.addEventListener('click', function () {
   console.log('clicked')
-  image1.classList.toggle('back')
-  backCards.classList.toggle('back')
+  frontSide.classList.toggle('currentAnswer')
+  currentAnswer.classList.toggle('currentAnswer')
 })
 
 let flashCards = [
-  {
-    work: 'The Kiss by Gustav Klmit',
-    image: 'images/pipe.jpg'
+  { image: 'images/Kanagawa.jpg',
+    answer: 'The Great wave of Kanagawa by Hokusai'
   },
 
   {
-    work: 'Trechery of Images by Rene Magritte',
-    image: 'images/Thekiss.jpeg'
+    image: 'images/Thekiss.jpeg',
+    answer: 'The Kiss by Gustav Klmit'
+
   },
 
   {
-    work: 'Weeping Woman by Pablo Picasso',
-    image: 'images/weeping_woman.jpg'
+    image: 'images/weeping_woman.jpg',
+    answer: 'Weeping Woman by Pablo Picasso'
+
+  },
+
+  {
+    image: 'images/pipe.jpg',
+    answer: 'Trechery of Images by Rene Magritte'
   }
 ]
 
-// correct.addEventListener('click', function () {
-//     for (let i = 0; i < flashCards.length; i++) {
-//       flashCards[i] += 1
-//     }
-// incorrect.addEventListener('click', function () {
+let currentScore = 0
+let counter = 0
 
-// })
+// used for default value setup
+SetDefaultValue()
+function SetDefaultValue () {
+  counter = 0
+  currentImage.src = flashCards[counter].image
+  console.log(currentImage)
+  currentAnswer.innerHTML = flashCards[counter].answer
+  currentScore = 0
+  console.log(startingScore)
+  document.getElementById('arrayimg').width = '560'
+  document.getElementById('arrayimg').height = '480'
+  document.getElementById('arrayimg').style.borderRadius = '10px'
 
-// // let incorrect = [ ]
-// // if
-// // addEventListeners to buttons
-// // in callback function: Increase the score if correct, then increase the question counter
-// // redisplay card again if incorrect.
+  startingScore.innerHTML = currentScore
+}
+
+correct.addEventListener('click', function () {
+  // CurrentScore gets incremented by 1.
+  currentScore++
+  startingScore.innerHTML = currentScore
+  // Answer is shown.
+  counter++
+  currentAnswer.innerHTML = flashCards[counter - 1].answer
+  currentImage.src = flashCards[counter - 1].image
+
+  correct.disabled = true
+  wrong.disabled = true
+  // disable buttons so that users don't keep scoring
+  // document.querySelector('currentAnswer').style.fontSize = '20%'
+})
+
+// Button disabled Property W3Schools
+
+// When the 'wrong' gets clicked will automatically be displayed.
+
+wrong.addEventListener('click', function () {
+  currentAnswer.innerHTML = flashCards[counter - 1].answer
+  currentImage.src = flashCards[counter - 1].image
+  counter++
+})
+
+// When 'next' is clicked, show next question.
+next.addEventListener('click', function () {
+  currentImage.src = flashCards[counter].image
+  currentAnswer.innerHTML = flashCards[counter].answer
+  correct.disabled = false
+  wrong.disabled = false
+})
+// counter++
+
+previous.addEventListener('click', function () {
+  currentImage.src = flashCards[counter].image
+  currentAnswer.innerHTML = flashCards[counter].answer
+  currentImage.src = flashCards[counter].image
+  correct.disabled = false
+  wrong.disabled = false
+})
