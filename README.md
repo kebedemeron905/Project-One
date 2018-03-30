@@ -1,49 +1,51 @@
-# Project-One
+# Project-One: Flash Cards
 
 
-## Pre-load your app with  iconic images (to be determined): Start with ten cards.
-Use an array of images and test in javascript to load the back
-and front of flash cards.
+## Description
+
+..* A compilation of flash cards that display famous works of art on the front, and the title and artist of the works on the back.
+
+..* Product of HTML, CSS and JavaScript
+
+
+
+## How To Play
+
+..* Users may fork or clone this repo for use.
+..* The goal of this game is for users to identify/review the title and artist of iconic artworks shown.
+..* On the landing page, users will see the first artwork displayed. 
+..* Users can click the correct button on the right if they know the answer, or the wrong button if they don’t. 
+..* Users can tap on the image to flip and see the correct answer or confirm their answers.
+..* They can navigate to the next image by clicking on the arrow keys at the bottom of the flash cards
+
+
+
+## main issues:
+
+..* Cards get incremented only when the correct button is clicked
+      - only score should get incremented when "correct" is clicked
+
+..* The back and the front of the flas cards operate independently. If card is left on the back/answer side, and the next button is clicked, card remains on the answer side. It should not. It should revert to showing the image/question side when the navigation arrows are clicked at any given point. 
+
+
+
+3 points:
+
+One: Hide back all the time 
+
 ```js
-let flashCards = [
-  {
-    Artist: '#',
-    cardImage: '#'
-  },
-  ```
+function showHide(back) {
+  document.querySelector('.currentanswer').style.display = 'none'
 
-
-## let the user flip through them quickly (back or front), 
-## Use the keyboard flip the card: user can hit 'Enter' to flip card.
-create arrow keys (back and next)
-allow flip using keyboard.
-
- ## mark whether they got it right or not. 
-   create conditional statments here:
-   - user clicks green button to indicate correct answer
-   - user clicks red button to indicate wrong answer
- ``` js
- <div class = "checkButtons">
-<button class= "red"> </button>
-<button class= "green"> </button>
-</div>
+    back.style.display = 'none';
+}
 ```
 
- ## Track which cards were incorrect, and re-display them until the user gets them right!
-  if the user answers wrong, use a for loop to redisplay images again and again.
+Avoiding undefined array elements: it keeps incrementing
 ```js
-  for (i=0; i < flashCards.length; i++) {
+if (flashCards[counter - 1].answer === 4 && flashCards[counter - 1].image === 4) {
+  currentAnswer.innerHTML = ''
+  currentImage.src = ''
+}
 
-  }
-
-```
-Bonus:
-
-Track scores over time (even if the page is reloaded)
-Include images on one or both sides of the flash card
-Let the user add flash cards (don't need to be saved across refreshes)
-
-
-## List of Functions Necessary:
-
-back class = hidden Note**
+ sometimes the correct button increments the counter: why?

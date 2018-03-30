@@ -15,21 +15,22 @@ h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-h3 {
+h2 {
     font-size: 30px;
     color: wheat;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
+    text-align: left;
     padding: 0px;
+    
 }
 
 .container {
-    height: 480px;  
-    width: 560px;
+    height: 350px;  
+    width: 430px;
         margin: 0 auto;
-        border: 3px solid wheat;
+        border: 1px solid wheat;
         border-radius: 10px;
-        background-color: white;
+        background-color: rgba(128, 128, 128, 0.379);
         justify-items: stretch;
         display:grid;
       
@@ -45,9 +46,9 @@ arrayimg {
 }
 
  .correct {
-    background-color: white;
+    background-color:  rgba(245, 222, 179, 0.913);
     border: none;
-    color: black;
+    color:rgb(58, 57, 57);
     border-radius: 20px;
     text-align: center;
     display: inline-block;
@@ -57,16 +58,21 @@ arrayimg {
     right: 250px; 
     padding: 30px;
     font-size: 25px;
+    outline: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
+  .correct:hover {
+    font-size: 35px;
+}
 
 
  .wrong {
 
-    background-color: white;
+    background-color:   rgba(245, 222, 179, 0.913);
     border: salmon;
     border-radius: 20px;
-    color: black;
+    color: rgb(58, 57, 57);
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -76,77 +82,103 @@ arrayimg {
     right: 250px; 
     padding: 30px;
     font-size: 25px;
+    outline: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    
     
        
 }
+
+.wrong:hover {
+    font-size: 35px;
+}
+
+
    .checkButtons {
        display: flex;
       justify-content:space-between;
- 
-     
+   
    } 
     
-
-    
-.currentAnswer{
+.currentanswer {
     display: none;  
     
 }
-div.currentAnswer{
-    font-size: 30px;
-    text-align: center;
+.back {
+    color: wheat;
+    font-size: 23px; 
+    text-align: center; 
+    margin-top: 130px;  
+    font-weight: bold;
+   outline: 2px 2px white;
 }
 
 
 
 .currentscore {
 color: wheat;
-font-size: 30px;
-text-align: center;
+font-size: 40px;
+text-align: left;
+padding: 0px;
 
 }
 
+/* button.enter {
+    color: wheat;
+    text-align: right;
+    padding: 0px;  
+} */
+
 .navbuttons {
 display: flex;
-justify-content: space-evenly;
-padding: 0px;
+justify-content: space-between;
+padding: 0;
+    border: none;
+    background: none;
+    outline: none;
 
 
 }
 button.next{
-    font-size: 50px;
+    font-size: 70px;
     padding: 0;
     border: none;
     background: none;
+    outline: none;
+
+}
+
+
+.next:hover{
+font-size: 90px;
 
 }
 button.previous{
 
-    font-size: 50px;
+    font-size: 70px;
     padding: 0;
     border: none;
     background: none;
+    color: orange;
+    outline: none;
 
 
 }
 
-/* .resetbutton {
+
+.previous:hover {
+    font-size: 90px;    
+}
+
+button.reset{
     
-    font-size: 30px;
+    font-size: 20px;
+    text-align: left;
+    border-radius: 10px;
+    color: rgb(58, 57, 57);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+    
 
-
-}
-
-/* reset {
-text-align: right;
-} */ 
-
-.next{
-
-}
-
-.previous {
-
-}
+} 
 
