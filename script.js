@@ -71,10 +71,8 @@ correct.addEventListener('click', function () {
   currentImage.src = flashCards[counter].image
   correct.disabled = true
   wrong.disabled = false
-  // disable buttons so that users don't keep scoring
+  // disable just the correct button.
 })
-
-// disable buttons so that users don't keep scoring
 
 // Button disabled Property W3Schools
 

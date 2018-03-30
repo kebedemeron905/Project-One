@@ -36,15 +36,6 @@ h2 {
       
 }
 
-arrayimg {
-    height: 415px;  
-    width: 600px;
-    margin: 0 auto;  
-    justify-items: stretch;
-    display:grid;
-    padding-top: 29px;
-}
-
  .correct {
     background-color:  rgba(245, 222, 179, 0.913);
     border: none;
