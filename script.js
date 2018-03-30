@@ -34,6 +34,10 @@ let flashCards = [
     answer: 'Weeping Woman by Pablo Picasso'
 
   },
+  {
+    image: 'images/virtue.gif',
+    answer: 'Vitruvian Man Leonardo da Vinci'
+  },
 
   {
     image: 'images/pipe.jpg',
@@ -89,12 +93,12 @@ wrong.addEventListener('click', function () {
   wrong.disabled = false
 })
 
-// When 'next' is clicked, show next question.
+// When 'next' is clicked, show next image.
 next.addEventListener('click', function () {
   counter++
   if (counter === flashCards.length) {
     console.log('done!')
-    counter = 3
+    counter = 4
     return
   }
   currentAnswer.innerHTML = flashCards[counter].answer
@@ -124,7 +128,7 @@ previous.addEventListener('click', function () {
 })
 correct.disabled = false
 wrong.disabled = false
-// When 'reset_button' is clicked it resets.
+// When 'reset_button' is clicked it reset to original values.
 reset.addEventListener('click', function () {
   SetDefaultValue()
 })

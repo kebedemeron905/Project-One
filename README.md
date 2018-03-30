@@ -21,12 +21,16 @@
 
 ## Game Logic Approach
 
+* This game uses an array object to load multiple content; in this case, image links, and artwork title and artist names.
+
 * 
 
-## Problems Yet to be Solved
+## Item Yet to be Add/fix
 
-* Score keeps incrementing. 
+* Make "Click Card to View Answer" apper on the images, and disappear when images get flipped.
 
+* The wrong button should deduct score points one card at a time, not always.
 
+* Add a pop-up congratulatory image or message at the end 
 
 

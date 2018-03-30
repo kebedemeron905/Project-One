@@ -122,7 +122,6 @@ text-align: left;
 padding: 0px;
 
 }
-
 /* button.enter {
     color: wheat;
     text-align: right;
@@ -177,8 +176,11 @@ button.reset{
     border-radius: 10px;
     color: rgb(58, 57, 57);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
-    
-
 } 
 
+.direction {
+    color: wheat;
+    font-size: 18px; 
+    text-align: right; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
