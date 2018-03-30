@@ -63,32 +63,28 @@ correct.addEventListener('click', function () {
   // CurrentScore gets incremented by 1.
   currentScore++
   startingScore.innerHTML = currentScore
-  currentAnswer.innerHTML = flashCards[counter - 1].answer
-  currentImage.src = flashCards[counter - 1].image
-  counter++
+  currentAnswer.innerHTML = flashCards[counter].answer
+  currentImage.src = flashCards[counter].image
+  correct.disabled = true
+  wrong.disabled = false
   // disable buttons so that users don't keep scoring
-  // document.querySelector('currentAnswer').style.fontSize = '20%'
 })
-correct.disabled = true
-wrong.disabled = true
-
-// if (flashCards[counter - 1].answer === 4 && flashCards[counter - 1].image === 4) {
-//   currentAnswer.innerHTML = ''
-//   currentImage.src = ''
-// }
 
 // disable buttons so that users don't keep scoring
-// document.querySelector('currentAnswer').style.fontSize = '20%'
 
 // Button disabled Property W3Schools
 
 // When the 'wrong' gets clicked answer automatically be displayed.
 
 wrong.addEventListener('click', function () {
-  currentAnswer.innerHTML = flashCards[counter - 1].answer
-  currentImage.src = flashCards[counter - 1].image
-  frontSide.classList.toggle('currentanswer')
-  currentAnswer.classList.toggle('currentanswer')
+  currentScore--
+  if (currentScore <= 0) {
+    currentScore = 0
+  }
+  startingScore.innerHTML = currentScore
+  currentAnswer.innerHTML = flashCards[counter].answer
+  currentImage.src = flashCards[counter].image
+
   correct.disabled = false
   wrong.disabled = false
 })
@@ -96,18 +92,35 @@ wrong.addEventListener('click', function () {
 // When 'next' is clicked, show next question.
 next.addEventListener('click', function () {
   counter++
-  frontSide.classList.add('currentImage')
-  currentAnswer.classList.remove('currentanswer')
-  currentAnswer.innerHTML = flashCards[counter - 1].answer
-  currentImage.src = flashCards[counter - 1].image
+  if (counter === flashCards.length) {
+    console.log('done!')
+    counter = 3
+    return
+  }
+  currentAnswer.innerHTML = flashCards[counter].answer
+  currentImage.src = flashCards[counter].image
+  if (frontSide.classList.contains('currentanswer')) {
+    frontSide.classList.remove('currentanswer')
+    currentAnswer.classList.add('currentanswer')
+  }
+
   correct.disabled = false
   wrong.disabled = false
 })
 
 previous.addEventListener('click', function () {
   counter--
+  if (counter <= 0) {
+    console.log('begin')
+    counter = 0
+  }
+
   currentAnswer.innerHTML = flashCards[counter].answer
   currentImage.src = flashCards[counter].image
+  if (frontSide.classList.contains('currentanswer')) {
+    frontSide.classList.remove('currentanswer')
+    currentAnswer.classList.add('currentanswer')
+  }
 })
 correct.disabled = false
 wrong.disabled = false
