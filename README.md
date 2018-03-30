@@ -1,4 +1,4 @@
-# Project-One: Flash Cards
+# Project One: Flash Cards
 
 
 ## Description
@@ -19,13 +19,7 @@
 * They can navigate to the next image by clicking on the arrow keys at the bottom of the flash cards
 
 
-## Game Logic Approach
-
-* This game uses an array object to load multiple content; in this case, image links, and artwork title and artist names.
-
-* 
-
-## Item Yet to be Add/fix
+## Items Yet to be Added/Fixed
 
 * Make "Click Card to View Answer" apper on the images, and disappear when images get flipped.
 
