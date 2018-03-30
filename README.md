@@ -28,3 +28,7 @@
 * Add a pop-up congratulatory image or message at the end 
 
 
+## Resources Utilized
+
+* MDN and Stack Overflow
+
