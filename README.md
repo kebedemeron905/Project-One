@@ -8,7 +8,6 @@
 * Product of HTML, CSS and JavaScript
 
 
-
 ## How To Play
 
 * Users may fork or clone this repo for use.
@@ -21,7 +20,7 @@
 
 ## Items Yet to be Added/Fixed
 
-* Make "Click Card to View Answer" apper on the images, and disappear when images get flipped.
+* Make "Click Card to View Answer" appear on the images, and disappear when images get flipped.
 
 * The wrong button should deduct score points one card at a time, not always.
 
@@ -29,6 +28,6 @@
 
 
 ## Resources Utilized
-
+<!-- I would use the full links here! -->
 * MDN and Stack Overflow
 

@@ -1,177 +1,165 @@
+/* I ran `Format Document` to make the formatting more consistent! */
 body {
-    width: 50%;
-    min-height: 100%;
-    background-color: white;
-    margin: 0 auto;
-    background-image: url("images/background.jpg");
-    background-size: cover;
+  width: 50%;
+  min-height: 100%;
+  background-color: white;
+  margin: 0 auto;
+  background-image: url("images/background.jpg");
+  background-size: cover;
 }
 
 h1 {
-    text-align: left;
-    font-size: 40px;
-    padding: 10px 0px 10px 0px;
-    color: wheat;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: left;
+  font-size: 40px;
+  padding: 10px 0px 10px 0px;
+  color: wheat;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 h2 {
-    font-size: 30px;
-    color: wheat;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: left;
-    padding: 0px;
-    
+  font-size: 30px;
+  color: wheat;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: left;
+  padding: 0px;
 }
 
 .container {
-    height: 350px;  
-    width: 430px;
-        margin: 0 auto;
-        border: 1px solid wheat;
-        border-radius: 10px;
-        background-color: rgba(128, 128, 128, 0.379);
-        justify-items: stretch;
-        display:grid;
-      
+  height: 350px;
+  width: 430px;
+  margin: 0 auto;
+  border: 1px solid wheat;
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.379);
+  justify-items: stretch;
+  display: grid;
 }
 
- .correct {
-    background-color:  rgba(245, 222, 179, 0.913);
-    border: none;
-    color:rgb(58, 57, 57);
-    border-radius: 20px;
-    text-align: center;
-    display: inline-block;
-    position:absolute;  
-    margin-left: 60%;   
-    top:400px;
-    right: 250px; 
-    padding: 30px;
-    font-size: 25px;
-    outline: none;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-
-  .correct:hover {
-    font-size: 35px;
+.correct {
+    /* the correct and wrong buttons are super similar! You could do a CSS class for the similar things and then a second class on each button to add the unique styling */
+  background-color: rgba(245, 222, 179, 0.913);
+  border: none;
+  color: rgb(58, 57, 57);
+  border-radius: 20px;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  margin-left: 60%;
+  top: 400px;
+  right: 250px;
+  padding: 30px;
+  font-size: 25px;
+  outline: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
+.correct:hover {
+  font-size: 35px;
+}
 
- .wrong {
-
-    background-color:   rgba(245, 222, 179, 0.913);
-    border: salmon;
-    border-radius: 20px;
-    color: rgb(58, 57, 57);
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    position:absolute; 
-    margin-right:57%;   
-    top:400px;
-    right: 250px; 
-    padding: 30px;
-    font-size: 25px;
-    outline: none;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   
-    
-       
+.wrong {
+  background-color: rgba(245, 222, 179, 0.913);
+  border: salmon;
+  border-radius: 20px;
+  color: rgb(58, 57, 57);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position: absolute;
+  margin-right: 57%;
+  top: 400px;
+  right: 250px;
+  padding: 30px;
+  font-size: 25px;
+  outline: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .wrong:hover {
-    font-size: 35px;
+  font-size: 35px;
 }
 
+.checkButtons {
+  display: flex;
+  justify-content: space-between;
+}
 
-   .checkButtons {
-       display: flex;
-      justify-content:space-between;
-   
-   } 
-    
 .currentanswer {
-    display: none;  
-    
+  display: none;
 }
 .back {
-    color: wheat;
-    font-size: 23px; 
-    text-align: center; 
-    margin-top: 130px;  
-    font-weight: bold;
-   outline: 2px 2px white;
+  color: wheat;
+  font-size: 23px;
+  text-align: center;
+  margin-top: 130px;
+  font-weight: bold;
+  outline: 2px 2px white;
 }
-
-
 
 .currentscore {
-color: wheat;
-font-size: 40px;
-text-align: left;
-padding: 0px;
-
+  color: wheat;
+  font-size: 40px;
+  text-align: left;
+  padding: 0px;
 }
-/* button.enter {
-    color: wheat;
-    text-align: right;
-    padding: 0px;  
-} */
+
+/* Remove commented code in production! */
 
 .navbuttons {
-display: flex;
-justify-content: space-between;
-padding: 0;
-    border: none;
-    background: none;
-    outline: none;
-
-
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
 }
-button.next{
-    font-size: 70px;
-    padding: 0;
-    border: none;
-    background: none;
-    outline: none;
-
+button.next {
+  font-size: 70px;
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
 }
 
-
-.next:hover{
-font-size: 90px;
-
+.next:hover {
+  font-size: 90px;
 }
-button.previous{
-
-    font-size: 70px;
-    padding: 0;
-    border: none;
-    background: none;
-    color: orange;
-    outline: none;
-
-
+button.previous {
+  font-size: 70px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: orange;
+  outline: none;
 }
-
 
 .previous:hover {
-    font-size: 90px;    
+  font-size: 90px;
 }
 
-button.reset{
-    
-    font-size: 20px;
-    text-align: left;
-    border-radius: 10px;
-    color: rgb(58, 57, 57);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-} 
+button.reset {
+  font-size: 20px;
+  text-align: left;
+  border-radius: 10px;
+  color: rgb(58, 57, 57);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
 
 .direction {
-    color: wheat;
-    font-size: 18px; 
-    text-align: right; 
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: wheat;
+  font-size: 18px;
+  text-align: right;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+#arrayimg {
+    width: 430px;
+    height: 350px;
+    border-radius: 10px;
 }
