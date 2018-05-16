@@ -1,12 +1,9 @@
-
 let container = document.querySelector('.container')
 let frontSide = document.querySelector('.front_side')
 let currentImage = document.querySelector('.currentImage')
 let currentAnswer = document.querySelector('.currentanswer')
 let correct = document.querySelector('.correct')
 let wrong = document.querySelector('.wrong')
-let next = document.querySelector('.next')
-let previous = document.querySelector('.previous')
 let startingScore = document.querySelector('.currentscore')
 let reset = document.querySelector('.reset')
 document.getElementById('arrayimg').width = '430'
@@ -61,6 +58,11 @@ function SetDefaultValue () {
   document.getElementById('arrayimg').height = '350'
   document.getElementById('arrayimg').style.borderRadius = '10px'
   startingScore.innerHTML = currentScore
+
+  if (frontSide.classList.contains('currentanswer')) {
+    frontSide.classList.remove('currentanswer')
+    currentAnswer.classList.add('currentanswer')
+  }
 }
 
 correct.addEventListener('click', function () {
@@ -73,10 +75,6 @@ correct.addEventListener('click', function () {
   wrong.disabled = false
   // disable just the correct button.
 })
-
-// Button disabled Property W3Schools
-
-// When the 'wrong' gets clicked answer automatically be displayed.
 
 wrong.addEventListener('click', function () {
   currentScore--
@@ -91,42 +89,46 @@ wrong.addEventListener('click', function () {
   wrong.disabled = false
 })
 
-// When 'next' is clicked, show next image.
-next.addEventListener('click', function () {
-  counter++
-  if (counter === flashCards.length) {
-    console.log('done!')
-    counter = 4
-    return
+document.addEventListener('keydown', function (event) {
+  if (event.keyCode === 39) {
+    counter++
+    if (counter === flashCards.length) {
+      console.log('done!')
+      counter = 4
+      return
+    }
+    currentImage.src = flashCards[counter].image
+    currentAnswer.innerHTML = flashCards[counter].answer
+    currentImage.src = flashCards[counter].image
+    if (frontSide.classList.contains('currentanswer')) {
+      frontSide.classList.remove('currentanswer')
+      currentAnswer.classList.add('currentanswer')
+    }
+    correct.disabled = false
+    wrong.disabled = false
+    console.log('right')
+  } else if (event.keyCode === 37) {
+    counter--
+    if (counter <= 0) {
+      counter = 0
+    }
+    currentImage.src = flashCards[counter].image
+    currentAnswer.innerHTML = flashCards[counter].answer
+    currentImage.src = flashCards[counter].image
+    if (frontSide.classList.contains('currentanswer')) {
+      frontSide.classList.remove('currentanswer')
+      currentAnswer.classList.add('currentanswer')
+    }
+    console.log('left')
+    correct.disabled = false
+    wrong.disabled = false
   }
-  currentAnswer.innerHTML = flashCards[counter].answer
-  currentImage.src = flashCards[counter].image
-  if (frontSide.classList.contains('currentanswer')) {
-    frontSide.classList.remove('currentanswer')
-    currentAnswer.classList.add('currentanswer')
-  }
-
-  correct.disabled = false
-  wrong.disabled = false
 })
 
-previous.addEventListener('click', function () {
-  counter--
-  if (counter <= 0) {
-    console.log('begin')
-    counter = 0
-  }
-
-  currentAnswer.innerHTML = flashCards[counter].answer
-  currentImage.src = flashCards[counter].image
-  if (frontSide.classList.contains('currentanswer')) {
-    frontSide.classList.remove('currentanswer')
-    currentAnswer.classList.add('currentanswer')
-  }
-})
-correct.disabled = false
-wrong.disabled = false
-// When 'reset_button' is clicked it reset to original values.
 reset.addEventListener('click', function () {
   SetDefaultValue()
 })
+
+// add comments
+// see if you're using any duplicate code
+// add a callback function
