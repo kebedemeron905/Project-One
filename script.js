@@ -1,19 +1,9 @@
-let container = document.querySelector('.container')
 let frontSide = document.querySelector('.front_side')
 let currentImage = document.querySelector('.currentImage')
 let currentAnswer = document.querySelector('.currentanswer')
 let correct = document.querySelector('.correct')
 let wrong = document.querySelector('.wrong')
 let startingScore = document.querySelector('.currentscore')
-let reset = document.querySelector('.reset')
-document.getElementById('arrayimg').width = '430'
-// let arrayImg = document.getElementById('arrayimg')
-
-container.addEventListener('click', function () {
-  console.log('clicked')
-  frontSide.classList.toggle('currentanswer')
-  currentAnswer.classList.toggle('currentanswer')
-})
 
 let flashCards = [
   { image: 'images/Kanagawa.jpg',
@@ -85,7 +75,7 @@ wrong.addEventListener('click', function () {
   currentAnswer.innerHTML = flashCards[counter].answer
   currentImage.src = flashCards[counter].image
 
-  correct.disabled = false
+  correct.disabled = true
   wrong.disabled = false
 })
 
@@ -122,11 +112,12 @@ document.addEventListener('keydown', function (event) {
     console.log('left')
     correct.disabled = false
     wrong.disabled = false
+  } else if (event.keyCode === 32) {
+    frontSide.classList.toggle('currentanswer')
+    currentAnswer.classList.toggle('currentanswer')
+  } else if (event.keyCode === 13) {
+    SetDefaultValue()
   }
-})
-
-reset.addEventListener('click', function () {
-  SetDefaultValue()
 })
 
 // add comments
