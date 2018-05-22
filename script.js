@@ -21,15 +21,27 @@ let flashCards = [
     answer: 'Weeping Woman by Pablo Picasso'
 
   },
-  {
-    image: 'images/virtue.gif',
-    answer: 'Vitruvian Man Leonardo da Vinci'
-  },
 
   {
     image: 'images/pipe.jpg',
     answer: 'Trechery of Images by Rene Magritte'
+  },
+
+  {
+    image: 'images/guernica.jpg',
+    answer: 'Guernica by Pablo Picasso'
+  },
+
+  {
+    image: 'images/flower.jpg',
+    answer: 'The Flower Carrier by Diego Rivara'
+  },
+
+  {
+    image: 'images/dogs.jpg',
+    answer: 'Dogs Playing Poker by C.M. Coolidge'
   }
+
 ]
 
 let currentScore = 0
@@ -84,7 +96,7 @@ document.addEventListener('keydown', function (event) {
     counter++
     if (counter === flashCards.length) {
       console.log('done!')
-      counter = 4
+      counter = 6
       return
     }
     currentImage.src = flashCards[counter].image
