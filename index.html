@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Famous Art Works</title>
 </head>
  <body>
-    <h1> Identify Title & Artist</h1>
+    <h1> Identify Artowrk Title & Artist</h1>
     <h2>Score</h2>
-
         <div class="score">
             <div class="currentscore">0</div>
         </div>
@@ -18,21 +18,40 @@
                 <input class="button correct" type="button" value="Correct">
                 <input class="button wrong" type="button" value="Wrong">  
         </div>
-    <button class="button reset" type="button" value="reset">Reset</button>
     
     <div class="container">
         <div class="front_side">
-           <div>
+            <div>
                <img id="arrayimg" class="currentImage">
-               <div class="direction"><p>Click Card to View Answer</p> </div>
             </div>
         </div>
         <div class="back">
              <div class="currentanswer"></div>
         </div>
-        
     </div>
-   
+    <div class='instructionscontainer'>
+        <h3>Instructions</h3>
+        <div class='arrow bounce'>
+            <i class="fa fa-angle-double-down"></i>
+        </div>
+        <div class='hover-content'>
+            <li>
+                ⬅️ ➡️ Use the right and left arrow keys 
+                on your keyboard to navigate cards
+            </li>
+            <li>
+                Press the SPACE bar to flip card and view answer   
+            </li>
+            <li>
+                Use the WRONG and CORRECT buttons to keep track
+                of your score based on your guess/answer.
+            </li>
+            <li>
+                Press the ENTER key to reset the game
+            </li>
+            
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

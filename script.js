@@ -1,19 +1,9 @@
-let container = document.querySelector('.container')
 let frontSide = document.querySelector('.front_side')
 let currentImage = document.querySelector('.currentImage')
 let currentAnswer = document.querySelector('.currentanswer')
 let correct = document.querySelector('.correct')
 let wrong = document.querySelector('.wrong')
 let startingScore = document.querySelector('.currentscore')
-let reset = document.querySelector('.reset')
-document.getElementById('arrayimg').width = '430'
-// let arrayImg = document.getElementById('arrayimg')
-
-container.addEventListener('click', function () {
-  console.log('clicked')
-  frontSide.classList.toggle('currentanswer')
-  currentAnswer.classList.toggle('currentanswer')
-})
 
 let flashCards = [
   { image: 'images/Kanagawa.jpg',
@@ -31,15 +21,27 @@ let flashCards = [
     answer: 'Weeping Woman by Pablo Picasso'
 
   },
-  {
-    image: 'images/virtue.gif',
-    answer: 'Vitruvian Man Leonardo da Vinci'
-  },
 
   {
     image: 'images/pipe.jpg',
     answer: 'Trechery of Images by Rene Magritte'
+  },
+
+  {
+    image: 'images/guernica.jpg',
+    answer: 'Guernica by Pablo Picasso'
+  },
+
+  {
+    image: 'images/flower.jpg',
+    answer: 'The Flower Carrier by Diego Rivara'
+  },
+
+  {
+    image: 'images/dogs.jpg',
+    answer: 'Dogs Playing Poker by C.M. Coolidge'
   }
+
 ]
 
 let currentScore = 0
@@ -85,7 +87,7 @@ wrong.addEventListener('click', function () {
   currentAnswer.innerHTML = flashCards[counter].answer
   currentImage.src = flashCards[counter].image
 
-  correct.disabled = false
+  correct.disabled = true
   wrong.disabled = false
 })
 
@@ -94,7 +96,7 @@ document.addEventListener('keydown', function (event) {
     counter++
     if (counter === flashCards.length) {
       console.log('done!')
-      counter = 4
+      counter = 6
       return
     }
     currentImage.src = flashCards[counter].image
@@ -122,11 +124,12 @@ document.addEventListener('keydown', function (event) {
     console.log('left')
     correct.disabled = false
     wrong.disabled = false
+  } else if (event.keyCode === 32) {
+    frontSide.classList.toggle('currentanswer')
+    currentAnswer.classList.toggle('currentanswer')
+  } else if (event.keyCode === 13) {
+    SetDefaultValue()
   }
-})
-
-reset.addEventListener('click', function () {
-  SetDefaultValue()
 })
 
 // add comments

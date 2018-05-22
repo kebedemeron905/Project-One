@@ -3,38 +3,68 @@ body {
     min-height: 100%;
     background-color: white;
     margin: 0 auto;
-    background-image: url("images/background.jpg");
+    /* background-image: url("images/background.jpg"); */
     background-size: cover;
 }
 
 h1 {
-    text-align: left;
+    text-align: center;
     font-size: 40px;
     padding: 10px 0px 10px 0px;
-    color: wheat;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: -3em;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 h2 {
     font-size: 30px;
-    color: wheat;
+    color: black;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: left;
-    padding: 0px;
+    text-align: center;
+    background-color: lightcoral;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 19em;
+    padding: 5px;
+
     
+}
+
+h3 {
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: lightcoral;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline;
 }
 
 .container {
     height: 350px;  
     width: 430px;
-        margin: 0 auto;
-        border: 1px solid wheat;
+        margin-top: 3em;
+        margin-left: 6em;
+        border: 1px solid black;
         border-radius: 10px;
         background-color: rgba(128, 128, 128, 0.379);
         justify-items: stretch;
         display:grid;
       
 }
+
+
+
+.thefront{
+   position: absolute;
+   backface-visibility: hidden;
+}
+
+.theback{
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg)
+ }
 
  .correct {
     background-color:  rgba(245, 222, 179, 0.913);
@@ -45,8 +75,8 @@ h2 {
     display: inline-block;
     position:absolute;  
     margin-left: 60%;   
-    top:400px;
-    right: 250px; 
+    top:350px;
+    right: 350px; 
     padding: 30px;
     font-size: 25px;
     outline: none;
@@ -69,8 +99,8 @@ h2 {
     display: inline-block;
     position:absolute; 
     margin-right:57%;   
-    top:400px;
-    right: 250px; 
+    top:460px;
+    right: -468px; 
     padding: 30px;
     font-size: 25px;
     outline: none;
@@ -96,7 +126,7 @@ h2 {
     
 }
 .back {
-    color: wheat;
+    color: black;
     font-size: 23px; 
     text-align: center; 
     margin-top: 130px;  
@@ -107,71 +137,53 @@ h2 {
 
 
 .currentscore {
-color: wheat;
+color: black;
 font-size: 40px;
 text-align: left;
 padding: 0px;
-
-}
-/* button.enter {
-    color: wheat;
-    text-align: right;
-    padding: 0px;  
-} */
-
-.navbuttons {
-display: flex;
-justify-content: space-between;
-padding: 0;
-    border: none;
-    background: none;
-    outline: none;
-
-
-}
-button.next{
-    font-size: 70px;
-    padding: 0;
-    border: none;
-    background: none;
-    outline: none;
-
+margin-left: 16em;
 }
 
 
-.next:hover{
-font-size: 90px;
-
+.instructionscontainer {
+   margin-top: -31em;
+   margin-left: -10em;
+   display: block;
+   position:absolute;
+  
 }
-button.previous{
-
-    font-size: 70px;
-    padding: 0;
-    border: none;
-    background: none;
-    color: orange;
-    outline: none;
-
-
-}
-
-
-.previous:hover {
-    font-size: 90px;    
-}
-
-button.reset{
-    
-    font-size: 20px;
-    text-align: left;
+.hover-content{
+    display: none;
+    border: 1px solid black;
     border-radius: 10px;
-    color: rgb(58, 57, 57);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-} 
-
-.direction {
-    color: wheat;
-    font-size: 18px; 
-    text-align: right; 
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+    background-color: lightblue;
+    
+ 
 }
+
+.instructionscontainer:hover .hover-content{
+    display: block;
+    background-color: lightblue;
+    
+}
+
+.bounce {
+    margin-left: 200px;
+    margin-top: -17px;
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
