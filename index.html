@@ -9,7 +9,7 @@
     <title>Famous Art Works</title>
 </head>
  <body>
-    <h1> Identify Artowrk Title & Artist</h1>
+    <h1> Identify Artwork Title & Artist</h1>
     <h2>Score</h2>
         <div class="score">
             <div class="currentscore">0</div>
@@ -18,17 +18,16 @@
                 <input class="button correct" type="button" value="Correct">
                 <input class="button wrong" type="button" value="Wrong">  
         </div>
-    
-    <div class="container">
-        <div class="front_side">
-            <div>
-               <img id="arrayimg" class="currentImage">
+    <div class="container" ontouchstart="this.classList.toggle('hover')">
+            <div class="card">
+                <div class="front_side">
+                    <img id="arrayimg" class="currentImage">
+                </div>
+                <div class="back">
+                    <div class="currentanswer"></div>
+                </div>
             </div>
         </div>
-        <div class="back">
-             <div class="currentanswer"></div>
-        </div>
-    </div>
     <div class='instructionscontainer'>
         <h3>Instructions</h3>
         <div class='arrow bounce'>

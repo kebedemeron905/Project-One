@@ -56,8 +56,8 @@ function SetDefaultValue () {
   currentAnswer.innerHTML = flashCards[counter].answer
   currentScore = 0
   console.log(startingScore)
-  document.getElementById('arrayimg').width = '430'
-  document.getElementById('arrayimg').height = '350'
+  document.getElementById('arrayimg').width = '530'
+  document.getElementById('arrayimg').height = '450'
   document.getElementById('arrayimg').style.borderRadius = '10px'
   startingScore.innerHTML = currentScore
 
@@ -131,7 +131,3 @@ document.addEventListener('keydown', function (event) {
     SetDefaultValue()
   }
 })
-
-// add comments
-// see if you're using any duplicate code
-// add a callback function
