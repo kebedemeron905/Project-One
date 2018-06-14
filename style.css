@@ -25,7 +25,8 @@ h2 {
     background-color: lightcoral;
     border: 1px solid black;
     border-radius: 10px;
-    margin-left: 19em;
+    margin-left: 21em;
+    margin-top: 2em;
     padding: 5px;
 
     
@@ -74,11 +75,11 @@ h3 {
     border-radius: 20px;
     text-align: center;
     display: inline-block;
-    position:absolute;  
-    margin-left: 60%;   
+    position: absolute; 
+    margin-left: 80%;   
     top:350px;
-    right: 350px; 
-    padding: 30px;
+    right: 250px; 
+    padding: 26px;
     font-size: 25px;
     outline: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -101,7 +102,7 @@ h3 {
     position:absolute; 
     margin-right:57%;   
     top:460px;
-    right: -468px; 
+    right: -560px; 
     padding: 30px;
     font-size: 25px;
     outline: none;
@@ -149,6 +150,7 @@ margin-left: 16em;
    margin-left: -10em;
    display: block;
    position:absolute;
+   width: 15em;
   
 }
 .hover-content{
